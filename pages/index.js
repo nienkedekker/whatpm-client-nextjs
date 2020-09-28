@@ -12,6 +12,7 @@ export async function getServerSideProps({ req }) {
 export default function IndexPage({ data }) {
   return (
     <div>
+      <h1>hello</h1>
       <pre>{JSON.stringify(data.movies)}</pre>
 
       <pre>{JSON.stringify(data.books)}</pre>
