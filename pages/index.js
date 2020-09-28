@@ -11,13 +11,31 @@ export async function getServerSideProps({ req }) {
 
 export default function IndexPage({ data }) {
   return (
-    <div>
-      <h1>hello</h1>
-      <pre>{JSON.stringify(data.movies)}</pre>
-
-      <pre>{JSON.stringify(data.books)}</pre>
-
-      <pre>{JSON.stringify(data.shows)}</pre>
-    </div>
+    <>
+      <b>Movies</b>
+      <ol>
+        {data.movies.map((movie) => (
+          <li>
+            {movie.title} ({movie.director})
+          </li>
+        ))}
+      </ol>
+      <b>Books</b>
+      <ol>
+        {data.books.map((book) => (
+          <li>
+            {book.author} - {book.title}
+          </li>
+        ))}
+      </ol>
+      <b>Shows</b>
+      <ol>
+        {data.shows.map((show) => (
+          <li>
+            {show.title} (season {show.season})
+          </li>
+        ))}
+      </ol>
+    </>
   );
 }
