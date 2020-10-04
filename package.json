@@ -13,6 +13,7 @@
     "next-absolute-url": "^1.2.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
+    "react-hook-form": "^6.9.0",
     "use-swr": "^1.0.3"
   }
 }
